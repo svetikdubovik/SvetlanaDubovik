@@ -24,6 +24,7 @@
                     <label for="radio">в google</label>
 
                 </fieldset>
+            </form>
             </td>
             <td>
                 <h3>Простая форма поиска с вариантами:</h3>
@@ -39,6 +40,7 @@
 
 
                 </fieldset>
+            </form>
             </td>
         </tr>
         <tr>
@@ -50,16 +52,18 @@
                     <INPUT TYPE="login" ID="login" placeholder="" required NAME="login" SIZE="25"><sup>&#42;</sup>
 
                     <LABEL FOR="login">Логин</LABEL>
-                    <INPUT TYPE="password" ID="password" placeholder="" required NAME="password" SIZE="25"><sup>&#42;</sup>
+                    <INPUT TYPE="password" ID="password" placeholder="" required NAME="password"
+                        SIZE="25"><sup>&#42;</sup>
 
                     <LABEL FOR="password"> Пароль</LABEL>
                     <label>
                         <br>
-                        <input type="checkbox" name=“val_1" id="chbox1" checked> 
+                        <input type="checkbox" name=“val_1" id="chbox1" checked>
                         <LABEL FOR="checkbox"> Остаться в системе</LABEL>
-                    <label> <br>
-                        <input type="submit" value="Войти">
+                        <label> <br>
+                            <input type="submit" value="Войти">
                 </fieldset>
+            </form>
             </td>
             <td>
                 <h3>Опрос (голосование):</h3>
@@ -74,11 +78,12 @@
                     <label for="radio">хорошо</label> <br>
                     <input type="radio" id="radio" name="radio" value="супер">
                     <label for="radio">супер</labelr><br><br>
-                    <input type="submit" value="Отправить">
-                    <input type="hidden" name="date_voite" value="2013.12.31">
+                        <input type="submit" value="Отправить">
+                        <input type="hidden" name="date_voite" value="2013.12.31">
 
 
                 </fieldset>
+            </form>
             </td>
         </tr>
         <tr>
@@ -87,45 +92,84 @@
                 <form action="http://fe.it-academy.by/TestForm.php" method="post"></form>
                 <fieldset>
                     <legend>Оставьте Ваш отзыв</legend>
-                    <input type="name" name=“name” placeholder="" required><sup>&#42;</sup> 
+                    <input type="name" name=“name” placeholder="" required><sup>&#42;</sup>
                     <label for="name">Имя</label><br>
-                    <input type="email" name=“email” placeholder="" required><sup>&#42;</sup> 
+                    <input type="email" name=“email” placeholder="" required><sup>&#42;</sup>
                     <label for="email">e-mail</label><br><br>
                     <input type="submit" value="Отправить">
                 </fieldset>
+            </form>
             </td>
             <td>
-                <h3>Простая форма поиска с вариантами:</h3>
+                <h3>Выпдающий и мульти списки:</h3>
                 <form action="http://sc.it-academy.by/fe/form.php" method="post"></form>
                 <fieldset>
-                    <legend>Строка поиска</legend>
-                    <input type="search"> <sup>&#10059</sup>
-                    <input type="submit" value="Искать">
+                    <legend>Города РБ</legend>
+                    <select name="list" id="list">
+                        <option value="1" selected>Брест</option>
+                        <option value="2" selected>Витебск</option>
+                        <option value="3" selected>Гомель</option>
+                        <option value="4" selected>Гродно</option>
+                        <option value="5" selected>Минск</option>
+                        <option value="6" selected>Могилев</option>
+                    </select>
+                    <select name="list" id="list">
 
+                        <optgroup label="Города РБ">
 
-                </fieldset>
+                            <option value="1">Брест</option>
+
+                            <option value="2">Минск</option>
+
+                            <option value="3">Витебск</option>
+
+                        </optgroup>
+
+                        <optgroup label="Города России">
+
+                            <option value="4">Москва</option>
+
+                            <option value="5">Рязань</option>
+
+                            <option value="6">Магадан</option>
+
+                        </optgroup>
+
+                    </select>
+                    <input type="button" value="OK" </fieldset>
+                </form>
             </td>
         </tr>
         <tr>
             <td>
-                <h3>Простая форма поиска с вариантами:</h3>
+                <h3>Загрузка файла на сервер:</h3>
                 <form action="http://sc.it-academy.by/fe/form.php" method="post"></form>
                 <fieldset>
-                    <legend>Строка поиска</legend>
-                    <input type="search">
-                    <input type="submit" value="Искать">
-
+                    <legend>Upload</legend>
+                    <form enctype="multipart/form-data" method="post">
+                        <label for="file">Файл</label><br>
+                        <input  type="file" name="f"><br>
+                        <label for="file">Срок хранения (года)</label><br>
+                        <input type="text">
+                        <input type="submit" value="Загрузить" >
+                        
+                          
+                        </form>
+                </form>
                 </fieldset>
             </td>
             <td>
-                <h3>Простая форма поиска с вариантами:</h3>
+                <h3>Валидация данных Html5 :</h3>
                 <form action="http://sc.it-academy.by/fe/form.php" method="post"></form>
                 <fieldset>
                     <legend>Строка поиска</legend>
-                    <input type="search"> <sup>&#10059</sup>
-                    <input type="submit" value="Искать">
-
-
+                    <INPUT TYPE="text" ID="index" NAME="index" value="Только русские буквы" pattern="[А-Яа-яЁё]"> <br>
+                        <Label>Телефонный номер в формате <br>
+                        +XXX-XX-XXXXXXX?где X любое число</Label><br>
+                        <INPUT TYPE="tel" name="tel" pattern="+[0-9]{3}[0-9]{2}[0-9]{7}">  
+                        <input type="submit" value="Проверить" >
+                      
+                    </form>
                 </fieldset>
             </td>
         </tr>
